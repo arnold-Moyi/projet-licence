@@ -1,0 +1,110 @@
+.img-carousel
+{
+	background-size: cover;
+	width: 100%;
+	height: 70vh;
+}
+
+
+.icon-zone i
+{
+	font-size:40px;
+}
+
+.pres1
+{
+	border-top: 1px solid lightgray;
+	background-color: #f8f9fa;
+	padding: 50px;
+
+}
+
+
+.footer
+{
+	padding: 20px;
+}
+
+.footer a
+{
+	text-decoration: none;
+	color : white;
+}
+
+/*Style login*/
+.login
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.login-card
+{
+	width: 350px;
+}
+/*page formulaire style*/
+.formulaire
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+
+}
+.formulaire-card
+{
+	width:350px;
+}
+/*  change password    */
+
+.pwd
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.pwd-card
+{
+	width: 400px;
+}
+
+/*  editer profile   */
+
+.profile
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.profile-card
+{
+	width: 400px;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	top: 50%;
+	left: 50%;
+}
+
+.formulaire
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+
+}
+.formulaire-card
+{
+	width:350px;
+}

@@ -1,0 +1,74 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/fonts/fontawesome/font-awesome.min.css'%}">
+	<title>Wiki | Login</title>
+
+</head>
+<body class="bg-ligth">
+
+	<div class="container-fluid">
+
+		<div class="login">
+			{% if messages %}
+			{% for message in messages %}
+
+			
+			<div class="alert alert-danger" role="alert">
+			  	{{message}}
+			</div>
+
+            {% endfor %}
+			{% endif %}
+			<h4 class="text-muted home"> <a href="{%url 'home'%}">WIKI</a></h4>
+			
+			<div class="card login-card">
+				<div class="card-header">
+					<h5>Connectez-vous à Wiki</h5>
+				</div>
+				<div class="card-body">
+					<form action="{% url 'connexion'%}" method="POST" >
+						{% csrf_token %}
+						
+						<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle"></i></span>
+							  </div>
+							  <input type="text" id="username" name="username" class="form-control" placeholder="username"  aria-describedby="basic-addon1" required>
+							  <div class="invalid-feedback">
+									Un username valide est requis.
+							   </div>
+						</div>
+
+						<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1"><i class="fa fa-unlock"></i></span>
+							  </div>
+							  <input type="password" id="password" name="password" class="form-control" placeholder="password"  aria-describedby="basic-addon1"required>
+							  <div class="invalid-feedback">
+								   Un mot de passe valide est requis.
+							  </div>
+						</div>
+
+
+						<button class="btn btn-primary btn-block"  type="submit">se connecter</button>
+						
+						<small class="text-muted">Nouveau sur Wiki ? <a href="{%url 'form'%}">Créez un compte</a></small>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <script type="text/javascript" src="{% static 'blog/js/jquery/jquery-3.2.1.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'blog/js/bootstrap/bootstrap.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'blog/js/custom/custom.js'%}"></script>
+
+
+</body>
+</html>

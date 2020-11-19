@@ -1,0 +1,187 @@
+{%load static%}
+{% load social_share %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style/style1.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/fonts/fontawesome/font-awesome.min.css'%}">
+	<title>Wiki | Dashboard</title>
+</head>
+<body class="sb-nav-fixed">
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+
+
+			  <a class="navbar-brand" href="{%url 'home'%}">HOME</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+                <form method="post" action="{% url 'search'%}">
+                                      {% csrf_token %}
+                                      <input type="text" name="search" class="" placeholder="Entrez l'intitulé">
+                                      <button type="submit" class="btn btn-primary btn sm">Rechercher</button>
+               </form>
+                                <br><br>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav ml-auto">
+				    	<a class="navbar-brand" href="#">
+				    		<div class="user-tools">
+									Bienvenue,
+									<small>{{ request.user.username }}</small>
+
+			               </div>
+
+				    	</a>
+		                <li class="nav-item dropdown">
+		                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-fw"></i></a>
+		                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+		                        <a class="dropdown-item" href="{%url 'déconnexion'%}">Se déconnecter</a>
+		                    </div>
+		                </li>
+                   </ul>
+               </div>
+    </nav>
+     <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">TAbleau de Bord</div>
+                            <a class="nav-link" href="{%url 'accueil'%}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-tachometer"></i></div>
+                                <small>Tableau de bord</small>
+                            </a>
+
+
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+
+                            </div>
+                            <!--editer le profil -->
+                             <div class="sb-sidenav-menu-heading">Profile</div>
+                            <a class="nav-link" href="{%url 'edit_profile'%}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-user"></i></div>
+                                <small>Editer Profil de l'utilisateur</small>
+                            </a>
+                                <a class="nav-link" href="{%url 'password'%}">
+                                        <div class="sb-nav-link-icon"><i class="fa fa-unlock"></i></div>
+                                    <small>Changer Mot de Passe</small>
+                                </a>
+
+                                <!--partie livre-->
+                            <div class="sb-sidenav-menu-heading">Livre</div>
+                            <a class="nav-link" href="{% url 'informatique'%}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                <small>Infomatique</small>
+                                </a>
+
+                             <a class="nav-link" href="{% url 'mathematique' %}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                <small>Mathematique</small>
+                                </a
+                            >
+                            <a class="nav-link" href="{% url 'biologie'%}">
+                                    <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                    <small> Biologie</small>
+                             </a>
+                                <!--partie memoire</p>-->
+
+                            <div class="sb-sidenav-menu-heading">Mémoire</div>
+                            <a class="nav-link" href="{% url 'licence'%}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                <small>Licence</small>
+                                </a
+                            ><a class="nav-link" href="{% url 'master'%}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                <small>Master</small>
+                                </a
+                            >
+                            <a class="nav-link" href="{% url 'doctorat'%}">
+                                    <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                    <small>Doctorant</small>
+                             </a>
+                            <div class="sb-sidenav-menu-heading">Revue</div>
+                            <a class="nav-link" href="{% url 'football'%}"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                <small>Fooball</small>
+                                </a>
+                                <a class="nav-link" href="{% url 'basketball'%}">
+                                	<div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                <small>Basketball</small>
+                                </a>
+                            <a class="nav-link" href="{% url 'judo'%}">
+                                    <div class="sb-nav-link-icon"><i class="fa fa-book"></i></div>
+                                    <small>Judo</small>
+                             </a>
+
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h4 class="mt-4 text-center text-primary">Nos livres de mathematique</h4>
+                          <table class="table">
+                             <thead>
+                                     <tr>
+                                         <th>Intitulé</th>
+                                         <th>Type</th>
+                                         <th>Ouvrir</th>
+                                         
+                                     </tr>
+                             </thead>
+                              <tbody>
+                                      {%for livre in livres %}
+                                          {% if livre.type == "mathematique" %}
+                                            <tr>
+                                               <td>{{livre.intitulé}}</td>
+                                               <td>{{livre.type}}</td>
+                                               <td><a href="{{livre.livre.url}}" class="btn btn-primary btn sm" target="_blank">Ouvrir</a></td>
+                                               
+                                             </tr>
+                                         {% endif %}
+                                       {%endfor%}
+                              </tbody>
+                          </table>
+                         <a href="{% url 'review'%}" class="btn btn-primary">Commenter</a>
+                          <a href="{%url 'avis_livre'%}" class="btn-primary btn sm" target="_blank" >Voir les commentaires</a>
+                    </div>
+                </main>
+                <br>
+
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                           
+
+                            <div class="text-muted">Copyright &copy; Wiki {% now 'y/' %} {% now 'm/' %} {% now 'd' %}
+                            </div>
+                            <div>
+                                                  <h3 class="text-warning">Share</h3>
+                                                  {% post_to_facebook object_or_url "Post to Facebook!" %}
+                                                    {% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Post to Twitter" %}
+                                                    {% send_email object.title "New Song: {{object.title}}. Check it out!" object_or_url "Share via email" %}
+                                                    {% post_to_whatsapp object_or_url "Share via WhatsApp" %}</div>
+
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+       
+
+
+    <script type="text/javascript" src="{% static 'blog/js/jquery/jquery-3.2.1.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'blog/js/bootstrap/bootstrap.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'blog/js/custom/custom.js'%}"></script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/fonts/fontawesome/font-awesome.min.css'%}">
+	<title>WIKI | About</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+	  		<a class="navbar-brand">WIKI</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+
+	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="{%url 'home'%}">Accueil <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">A propos</a>
+			      </li>
+			    </ul>
+			    <form class="form-inline my-2 my-lg-0">
+			      <a href="{%url 'login'%}" class="btn btn-dark my-2 my-sm-0" role="button">Se connecter</a>
+			    </form>
+		    </div>
+		</nav>
+	</header>
+
+		<br><br><br><br>
+
+	<section>
+		<div class="container">
+			<h2 class="text-center text-dark">A propos de nous :</h2>
+			<br><br>
+
+			<div class="row">
+					<div class="col-md-6">
+
+						<div>
+							La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante.La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante.La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante.courante.
+							La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante. blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante. blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est 
+						</div>
+						
+							
+					</div>
+
+					<div class="col-md-6">
+						La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante. blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante. blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante. blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est La documentation est un ensemble de documents fournis sur papier, en ligne ou sur des supports numériques ou analogiques, tels que des cassettes audio ou des CD. Les exemples sont les guides de l'utilisateur, les livres blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est devenue moins courante. blancs, l'aide en ligne, les guides de référence rapide. La documentation papier ou papier est ...
+					</div>
+
+
+					
+			</div>
+			
+		</div>
+	</section>
+	<br><br><br>
+	<footer class="bg-dark text-white footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4"> 
+					<h6>ADRESSE</h6>
+					Résidence Universitaire EMIR ABDEL KADER C2, Oran 31000
+				</div>
+				<div class="col-md-4">
+					<h6>CONTACT</h6>
+					<p> <i class="fa fa-phone-square"></i> +213 66 74 47 851 ,  +213 55 50 86 937  <br>
+						<i class="fa fa-envelope"></i> arnoldmoyimoyi@gmail.com <br>
+						<i class="fa fa-envelope"></i> abdoulkarim@gmail.com
+					</p>
+			 	</div>
+				<div class="col-md-4"> 
+					<h6>SUIVEZ-NOUS</h6>
+					<a href="#"><i class="fa fa-facebook-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+
+			<div class="text-center">
+				© {% now 'y/' %} {% now 'm/' %} {% now 'd' %} <a class="text-primary" href="#"><b>WIKI</b></a>
+			</div>
+		</div>
+	</footer>
+	
+
+    <script type="text/javascript" src="{% static 'blog/js/jquery/jquery-3.2.1.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'blog/js/bootstrap/bootstrap.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'blog/js/custom/custom.js'%}"></script>
+</body>
+</body>
+</html>
